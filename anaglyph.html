@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+        maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="OptoMeasure — Anaglyph Patient View">
+  <title>OptoMeasure · Anaglyph</title>
+  <link rel="stylesheet" href="anaglyph.css">
+</head>
+<body>
+
+  <!-- Full-screen canvas — anaglyph renders here -->
+  <canvas id="anaCanvas"></canvas>
+
+  <!-- Tiny connection dot -->
+  <div class="conn-indicator" id="connIndicator"></div>
+
+  <!-- Connection overlay — shown until controller connects -->
+  <div class="connect-overlay" id="connectOverlay">
+
+    <div class="ov-ring ov-ring-1"></div>
+    <div class="ov-ring ov-ring-2"></div>
+    <div class="ov-grid"></div>
+
+    <div class="ov-card">
+
+      <div class="ov-icon-wrap">
+        <div class="ov-icon-orbit orbit-1"></div>
+        <div class="ov-icon-orbit orbit-2"></div>
+        <div class="ov-icon">🕶️</div>
+      </div>
+
+      <div class="ov-title">Anaglyph View</div>
+
+      <div class="ov-badges">
+        <span class="badge red-badge">RED = Right Eye</span>
+        <span class="badge cyan-badge">CYAN = Left Eye</span>
+      </div>
+
+      <p class="ov-instruction">
+        Wear your <strong>Red-Cyan glasses</strong>, then show this code
+        to the Controller phone.
+      </p>
+
+      <div class="code-display-wrap">
+        <div class="code-display" id="roomCode">------</div>
+        <button class="copy-btn" id="btnCopy" title="Copy code">📋</button>
+      </div>
+
+      <div class="status-line" id="connectStatus">
+        <div class="status-dot waiting"></div>
+        <span>Waiting for controller…</span>
+      </div>
+
+      <div class="signal-bars">
+        <div class="bar b1"></div>
+        <div class="bar b2"></div>
+        <div class="bar b3"></div>
+        <div class="bar b4"></div>
+      </div>
+
+      <!-- Target legend -->
+      <div class="target-legend">
+        <div class="legend-row">
+          <span class="legend-dot" style="background:#ff2020"></span>
+          <span>Right eye target (red lens)</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-dot" style="background:#00e5ff"></span>
+          <span>Left eye target (cyan lens)</span>
+        </div>
+        <div class="legend-row">
+          <span style="font-size:.65rem;color:#608e83">
+            ▲ triangle = right eye suppression check<br>
+            ◆ diamond  = left eye suppression check
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script src="shared.js"></script>
+  <script src="anaglyph.js"></script>
+</body>
+</html>

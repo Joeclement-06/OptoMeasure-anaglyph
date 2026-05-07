@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>OptoMeasure</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="landing-container">
+
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-icon-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="hero-icon">👁</div>
+      </div>
+      <h1>Opto<span>Measure</span></h1>
+      <p class="hero-sub">VR Fusional Vergence System · +8.0 D</p>
+      <p class="hero-desc">
+        Two-device wireless vergence testing via WebRTC.
+        Choose VR split-screen <em>or</em> Red-Cyan anaglyph mode.
+      </p>
+    </section>
+
+    <div class="role-cards" style="grid-template-columns:1fr;max-width:420px;margin:0 auto;">
+
+      <a class="role-card controller-card" href="controller.html">
+        <div class="corner-tl"></div><div class="corner-br"></div>
+        <div class="card-icon">🎮</div>
+        <h2>Controller</h2>
+        <p class="card-role">Doctor / Examiner</p>
+        <p class="card-desc">Control prism steps, switch between VR and Anaglyph modes, select targets, record break &amp; recovery.</p>
+        <div class="card-features">
+          <span>BO &amp; BI</span><span>VR + Anaglyph</span><span>3 Targets</span><span>IPD</span><span>Results</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+    </div>
+
+    <p style="text-align:center;font-family:var(--mono);font-size:.68rem;color:var(--text2);margin-top:-10px;">
+      Patient opens one of the views below:
+    </p>
+
+    <div class="role-cards">
+
+      <a class="role-card vr-card" href="vr.html">
+        <div class="corner-tl"></div><div class="corner-br"></div>
+        <div class="card-icon">🥽</div>
+        <h2>VR View</h2>
+        <p class="card-role">Patient · Cardboard Headset</p>
+        <p class="card-desc">Split-screen crosshair target. Place phone in VR cardboard headset.</p>
+        <div class="card-features">
+          <span>Split Screen</span><span>Auto-Fullscreen</span><span>Landscape</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a class="role-card" href="anaglyph.html"
+         style="border-color:rgba(255,32,32,.15);">
+        <div class="corner-tl" style="border-color:#ff8080"></div>
+        <div class="corner-br" style="border-color:#00e5ff"></div>
+        <div class="card-icon"
+             style="background:linear-gradient(135deg,rgba(255,32,32,.12),rgba(0,229,255,.12));border-color:rgba(255,100,100,.2);">
+          🕶️
+        </div>
+        <h2>Anaglyph View</h2>
+        <p class="card-role" style="color:#ff8080">Patient · Red-Cyan Glasses</p>
+        <p class="card-desc">
+          Colour-separated binocular targets on one screen.
+          Forces true fusion — works without a headset.
+        </p>
+        <div class="card-features">
+          <span>Red-Cyan</span><span>3 Targets</span><span>Suppression Check</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+    </div>
+
+    <div class="landing-info">
+      <div class="info-header">System Specifications</div>
+      <div class="info-row"><span class="info-tag">Device</span><span>Vivo Y3 / 1938 — 6.27″ × 2.94″ display</span></div>
+      <div class="info-row"><span class="info-tag">Lens</span><span>+8.0 D — Magnification 4× — Image ~36 cm</span></div>
+      <div class="info-row"><span class="info-tag">BO Formula</span><span>y = 65x + 2  (y = prism Δ, x = shift cm)</span></div>
+      <div class="info-row"><span class="info-tag">BI Formula</span><span>y = 55x + 2  (gentler — max 24Δ)</span></div>
+      <div class="info-row"><span class="info-tag">Anaglyph</span><span>Red = Right eye · Cyan = Left eye</span></div>
+      <div class="info-row"><span class="info-tag">Targets</span><span>Cross/Cage · Dot/Circle · Bird/Cage</span></div>
+      <div class="info-row"><span class="info-tag">Network</span><span>WebRTC P2P via PeerJS — no server</span></div>
+    </div>
+
+    <div class="quickstart">
+      <div class="quickstart-header">⚡ Quick Start — Anaglyph Mode</div>
+      <ol>
+        <li><span>Patient opens <strong>Anaglyph View</strong> and wears Red-Cyan glasses.</span></li>
+        <li><span>Doctor opens <strong>Controller</strong>, enters the room code, taps Connect.</span></li>
+        <li><span>Select <strong>Anaglyph</strong> display mode and choose a target (Cross in Cage recommended).</span></li>
+        <li><span>Confirm patient sees both corner markers (▲ red + ◆ cyan) — verifies no suppression.</span></li>
+        <li><span>Select <strong>Base-Out</strong>, tap <strong>+</strong> step by step.</span></li>
+        <li><span>Record <strong>Break</strong> on diplopia, <strong>Recovery</strong> when fusion returns.</span></li>
+        <li><span>Repeat with <strong>Base-In</strong>.</span></li>
+      </ol>
+    </div>
+
+    <footer class="landing-footer">
+      OptoMeasure · VR Fusional Vergence · WebRTC · No data uploaded
+    </footer>
+
+  </div>
+</body>
+</html>
